@@ -28,7 +28,13 @@
 </template>
 
 <script>
-export default {}
+import ids from '~/db/classes';
+
+export default {
+  mounted() {
+    console.log(ids);
+  },
+};
 </script>
 
 <style>
