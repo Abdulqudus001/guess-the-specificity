@@ -4,6 +4,8 @@ I wrote an [article](https://dev.to/ibn_abubakre/css-specificity-explained-1134)
 
 The CSS selectors in the game is for educational purposes only and as such might not be the most appropriate.
 
+*To make the CSS selectors more random, you can check the [db folder](https://github.com/Abdulqudus001/guess-the-specificity/tree/master/db) to add more CSS selectors*
+
 Credits to [keeganstreet](https://github.com/keeganstreet/) for his [specificity-calculator](https://github.com/keeganstreet/specificity)
 
 ## Todo
