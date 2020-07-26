@@ -21,6 +21,7 @@ export default {
     generateNewSelector() {
       const selectorObj = this.generateSelectorObj(3);
       const selectors = this.createSelector(selectorObj);
+      this.$emit('new');
       this.addSelectorToPage(selectors);
     },
     addSelectorToPage(selectors) {
@@ -151,9 +152,11 @@ export default {
 
 button {
   border: 1px solid transparent;
+  cursor: pointer;
+  color: #fff;
   background-color: #D62828;
   padding: 10px 20px;
-  margin: 20px;
+  margin: 10px 0 20px;
   border-radius: 4px;
   outline: none;
   &:focus {
