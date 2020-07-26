@@ -28,7 +28,7 @@ export default {
       const selectorField = document.querySelector('.selectors');
       selectorField.textContent = '';
       const fragment = document.createDocumentFragment();
-      const seperators = [' ', '', ' > ', ' ~ ', ' + '];
+      const seperators = [' ', '', ' > ', '', ' ~ ', '', ' + '];
       selectors.forEach((selector, index) => {
         const selectorType = document.createElement('span');
         const seperator = document.createElement('span');
@@ -135,15 +135,29 @@ export default {
 <style lang="scss" scoped>
 .container {
   width: 100%;
+  max-width: 100%;
+  height: fit-content;
+}
+
+button {
+  border: 1px solid transparent;
+  background-color: #D62828;
+  padding: 10px 20px;
+  margin: 20px;
+  border-radius: 4px;
+  outline: none;
+  &:focus {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
 }
 
 .selector-container {
   width: 100%;
   padding: 5px 10px;
-  max-width: calc(100% - 20px);
   min-height: 40px;
   margin: 0 auto;
   background-color: #002B36;
+  border-radius: 4px;
   position: relative;
 }
 
@@ -154,5 +168,9 @@ export default {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  flex-flow: row wrap;
+  @media screen and (max-width: 600px) {
+    font-size: 1.2rem;
+  }
 }
 </style>

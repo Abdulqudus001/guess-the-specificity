@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <h1>Guess The Specificity</h1>
     <new-selector />
   </div>
 </template>
@@ -8,12 +9,12 @@
 export default {};
 </script>
 
-<style>
+<style lang="scss" scoped>
 .container {
+  color: #D62828;
   width: 700px;
   max-width: calc(100% - 40px);
   margin: 0 auto;
-  padding: 20px;
   height: 100vh;
   display: flex;
   justify-content: center;
