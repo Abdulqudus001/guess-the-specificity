@@ -7,11 +7,11 @@ The CSS selectors in the game is for educational purposes only and as such might
 ## Todo
  - [x] Generate random CSS selectors
  - [x] Calculate specificity and check score
- - [] Random success message
- - [] Come up with a better UI
- - [] Add extra ids, classes, tags name and pseudo classes
- - [] Add support for attribute selectors
- - [] Add difficulties
+ - [ ] Random success message
+ - [ ] Come up with a better UI
+ - [ ] Add extra ids, classes, tags name and pseudo classes
+ - [ ] Add support for attribute selectors
+ - [ ] Add difficulties
 
 ## Project setup
 
