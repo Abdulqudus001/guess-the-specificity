@@ -57,6 +57,7 @@ const calculateSingle = (input) => {
 
   // Replace escaped characters with plain text, using the "A" character
   // https://www.w3.org/TR/CSS21/syndata.html#characters
+  // eslint-disable-next-line
   (function () {
     const replaceWithPlainText = (regex) => {
       let matches;
@@ -82,6 +83,7 @@ const calculateSingle = (input) => {
   }());
 
   // Remove anything after a left brace in case a user has pasted in a rule, not just a selector
+  // eslint-disable-next-line
   (function () {
     const regex = /{[^]*/gm;
     let matches;

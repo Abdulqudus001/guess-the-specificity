@@ -4,6 +4,8 @@ I wrote an [article](https://dev.to/ibn_abubakre/css-specificity-explained-1134)
 
 The CSS selectors in the game is for educational purposes only and as such might not be the most appropriate.
 
+Credits to [keeganstreet](https://github.com/keeganstreet/) for his [specificity-calculator](https://github.com/keeganstreet/specificity)
+
 ## Todo
  - [x] Generate random CSS selectors
  - [x] Calculate specificity and check score
