@@ -24,24 +24,32 @@ export default {
       this.addSelectorToPage(selectors);
     },
     addSelectorToPage(selectors) {
+      const selectorArray = [];
       const selectorField = document.querySelector('.selectors');
       selectorField.textContent = '';
       const fragment = document.createDocumentFragment();
-      const seperators = [' ', '', ' > ', '', ' ~ ', '', ' + '];
+      const seperators = [' ', ' > ', ' ~ ', ' + '];
       selectors.forEach((selector, index) => {
         const selectorType = document.createElement('span');
         const seperator = document.createElement('span');
+        selectorArray.push(selector.value);
         selectorType.textContent = selector.value;
         // Add background color to span
         selectorType.style.backgroundColor = this.backgroundColor(selector.type);
         selectorType.style.padding = '5px 0';
         selectorType.style.margin = '10px 0';
         if (index < selectors.length - 1 && selectors[index + 1].type !== 'pseudo') {
-          seperator.textContent = this.getRandomElement(seperators);
-          seperator.style.margin = '0 10px';
+          const randomSeperator = this.getRandomElement(seperators);
+          selectorArray.push(randomSeperator);
+          seperator.textContent = randomSeperator;
+          // Check if the seperator is not an empty string
+          if (randomSeperator) {
+            seperator.style.margin = '0 10px';
+          }
         }
         fragment.append(selectorType, seperator);
       });
+      this.computeSpecificity(selectorArray);
       selectorField.append(fragment);
     },
     backgroundColor(type) {
@@ -124,11 +132,11 @@ export default {
         type: current.selectorType,
         value: current.selectorValue,
       });
-      this.computeSpecificity(selector);
       return selector;
     },
     computeSpecificity(selector) {
-      console.log(selector);
+      const specificity = this.$specificity(selector.join(''));
+      this.$emit('specificity', specificity);
     },
   },
 };

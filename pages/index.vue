@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h1>Guess The Specificity</h1>
-    <new-selector />
+    <new-selector @specificity="saveSpecificity" />
     <div class="specs">
       <div class="spec">
         <input type="text" readonly v-model="id">
@@ -34,9 +34,12 @@ export default {
     id: 0,
     className: 0,
     tag: 0,
+    specificity: null,
   }),
-  mounted() {
-    console.log(this.$specificity('ul#nav li.active a'));
+  watch: {
+    specificity(val) {
+      console.log(val);
+    },
   },
   methods: {
     decrement(e, key) {
@@ -45,6 +48,9 @@ export default {
       } else {
         this[key] -= 1;
       }
+    },
+    saveSpecificity(e) {
+      this.specificity = e;
     },
   },
 };
@@ -98,11 +104,33 @@ export default {
   display: flex;
 }
 
-.spec input {
-  font-size: 80px;
-  text-align: center;
-  margin: 10px;
-  width: 150px;
-  height: 150px;
+.spec {
+  button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    font-size: 1.2rem;
+    line-height: 0;
+    background-color: #002B36;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    &:focus {
+      border: 1px solid rgba($color: #000000, $alpha: 0.5);
+    }
+  }
+  input {
+    font-size: 80px;
+    text-align: center;
+    margin: 10px;
+    width: 150px;
+    height: 150px;
+    @media screen and (max-width: 600px) {
+      width: 80px;
+      height: 80px;
+      font-size: 60px;
+    }
+  }
 }
 </style>
