@@ -14,11 +14,12 @@ export default {};
   max-width: calc(100% - 40px);
   margin: 0 auto;
   padding: 20px;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  flex-direction: column;
 }
 
 .title {

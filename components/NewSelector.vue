@@ -1,6 +1,8 @@
 <template>
-  <div class="selector">
-    <div class="selectors"></div>
+  <div class="container">
+    <div class="selector-container">
+      <div class="selectors"></div>
+    </div>
     <button @click="generateNewSelector">New Selector</button>
   </div>
 </template>
@@ -31,13 +33,29 @@ export default {
         const selectorType = document.createElement('span');
         const seperator = document.createElement('span');
         selectorType.textContent = selector.value;
-        selectorType.classList.add(selector.type);
-        if (index < selectors.length - 1) {
+        // Add background color to span
+        selectorType.style.backgroundColor = this.backgroundColor(selector.type);
+        selectorType.style.padding = '5px 0';
+        selectorType.style.margin = '10px 0';
+        if (index < selectors.length - 1 && selectors[index + 1].type !== 'pseudo') {
           seperator.textContent = this.getRandomElement(seperators);
+          seperator.style.margin = '0 10px';
         }
         fragment.append(selectorType, seperator);
       });
       selectorField.append(fragment);
+    },
+    backgroundColor(type) {
+      if (type === 'class') {
+        return '#1E6FA8';
+      }
+      if (type === 'id') {
+        return '#A92B68';
+      }
+      if (type === 'tag' || type === 'pseudo') {
+        return '#22817A';
+      }
+      return '';
     },
     generateNumber(max) {
       return Math.floor(Math.random() * max);
@@ -115,17 +133,26 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.selector {
+.container {
   width: 100%;
-  padding: 10px;
+}
+
+.selector-container {
+  width: 100%;
+  padding: 5px 10px;
   max-width: calc(100% - 20px);
   min-height: 40px;
   margin: 0 auto;
   background-color: #002B36;
   position: relative;
-  button {
-    position: absolute;
-    right: 10px;
-  }
+}
+
+.selectors {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 </style>
