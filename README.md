@@ -1,6 +1,17 @@
 # guess-the-specificity
 
-## C
+I wrote an [article](https://dev.to/ibn_abubakre/css-specificity-explained-1134) on dev.to concerning CSS specificity and I decided to come up with the fun game that allows you to test your knowledge of CSS specificity.
+
+The CSS selectors in the game is for educational purposes only and as such might not be the most appropriate.
+
+## Todo
+ - [x] Generate random CSS selectors
+ - [x] Calculate specificity and check score
+ - [] Random success message
+ - [] Come up with a better UI
+ - [] Add extra ids, classes, tags name and pseudo classes
+ - [] Add support for attribute selectors
+ - [] Add difficulties
 
 ## Project setup
 
@@ -26,22 +37,4 @@
     yarn build
     yarn start
   ```
-<!-- 
-```bash
-# install dependencies
-$ yarn install
-
-# serve with hot reload at localhost:3000
-$ yarn dev
-
-# build for production and launch server
-$ yarn build
-$ yarn start
-
-# generate static project
-$ yarn generate
-```
-- random success message
-- Display success message better
-- Update UI
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org). -->
