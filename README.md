@@ -16,6 +16,7 @@ Credits to [keeganstreet](https://github.com/keeganstreet/) for his [specificity
  - [ ] Add extra ids, classes, tags name and pseudo classes
  - [ ] Add support for attribute selectors
  - [ ] Add difficulties
+ - [ ] Add explanation of how to calculate the specificity
 
 ## Project setup
 
