@@ -1,45 +1,19 @@
 <template>
   <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">
-        guess-the-specificity
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
+    <new-selector />
   </div>
 </template>
 
 <script>
-import ids from '~/db/classes';
-
-export default {
-  mounted() {
-    console.log(ids);
-  },
-};
+export default {};
 </script>
 
 <style>
 .container {
+  width: 700px;
+  max-width: calc(100% - 40px);
   margin: 0 auto;
+  padding: 20px;
   min-height: 100vh;
   display: flex;
   justify-content: center;
