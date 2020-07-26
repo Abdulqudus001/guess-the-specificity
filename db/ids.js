@@ -1,4 +1,13 @@
 export default [
+  '#container',
   '#main',
-  '#btn',
+  '#myElement',
+  '#top',
+  '#left',
+  '#right',
+  '#puppy',
+  '#first-paragraph',
+  '#nav',
+  '#id',
+  '#myId',
 ];
