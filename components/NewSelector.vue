@@ -22,7 +22,6 @@ export default {
       const selectorObj = this.generateSelectorObj(3);
       const selectors = this.createSelector(selectorObj);
       this.addSelectorToPage(selectors);
-      console.log(selectors);
     },
     addSelectorToPage(selectors) {
       const selectorField = document.querySelector('.selectors');
@@ -125,8 +124,11 @@ export default {
         type: current.selectorType,
         value: current.selectorValue,
       });
-
+      this.computeSpecificity(selector);
       return selector;
+    },
+    computeSpecificity(selector) {
+      console.log(selector);
     },
   },
 };

@@ -30,6 +30,7 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off',
     'import/prefer-default-export': 'off',
     'prefer-promise-reject-errors': 'off',
+    'no-useless-escape': 'off',
     'max-len': [2, 170],
 
     'linebreak-style': ['error', process.env.NODE_ENV === 'prod' ? 'unix' : 'windows'],
