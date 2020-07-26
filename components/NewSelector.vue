@@ -1,5 +1,6 @@
 <template>
   <div class="selector">
+    <div class="selectors"></div>
     <button @click="generateNewSelector">New Selector</button>
   </div>
 </template>
@@ -17,8 +18,26 @@ export default {
   methods: {
     generateNewSelector() {
       const selectorObj = this.generateSelectorObj(3);
-      const selector = this.createSelector(selectorObj);
-      console.log(selector);
+      const selectors = this.createSelector(selectorObj);
+      this.addSelectorToPage(selectors);
+      console.log(selectors);
+    },
+    addSelectorToPage(selectors) {
+      const selectorField = document.querySelector('.selectors');
+      selectorField.textContent = '';
+      const fragment = document.createDocumentFragment();
+      const seperators = [' ', '', ' > ', ' ~ ', ' + '];
+      selectors.forEach((selector, index) => {
+        const selectorType = document.createElement('span');
+        const seperator = document.createElement('span');
+        selectorType.textContent = selector.value;
+        selectorType.classList.add(selector.type);
+        if (index < selectors.length - 1) {
+          seperator.textContent = this.getRandomElement(seperators);
+        }
+        fragment.append(selectorType, seperator);
+      });
+      selectorField.append(fragment);
     },
     generateNumber(max) {
       return Math.floor(Math.random() * max);
@@ -89,7 +108,7 @@ export default {
         value: current.selectorValue,
       });
 
-      console.log(selector);
+      return selector;
     },
   },
 };
