@@ -16,7 +16,7 @@ Credits to [keeganstreet](https://github.com/keeganstreet/) for his [specificity
  - [ ] Add extra ids, classes, tags name and pseudo classes
  - [ ] Add support for attribute selectors
  - [ ] Add difficulties
- - [ ] Add explanation of how to calculate the specificity
+ - [x] Add explanation of how to calculate the specificity
 
 ## Project setup
 
@@ -43,3 +43,18 @@ Credits to [keeganstreet](https://github.com/keeganstreet/) for his [specificity
     yarn start
   ```
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org). -->
+
+## How to Calculate Specificity
+
+To guess the specificity, you just need to count the individual numbers of selectors .
+
+### Example
+
+![Example 1](images/Screenshot-2.PNG)
+
+The answer to the image above would be wrong because we have 1 Tag Name, 1 Class and 1 Pseudo-class. Since the Class and Pseudo-class are grouped together that would make it 2 Class and 1 Tag Name.
+
+![Example 2](images/Screenshot-3.PNG)
+
+My answer is now correct because i guessed it according to the selectors. 😎
+
