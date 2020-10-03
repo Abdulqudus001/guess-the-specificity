@@ -9,4 +9,6 @@ export default [
   'div',
   'span',
   'main',
+  'input',
+  'button',
 ];

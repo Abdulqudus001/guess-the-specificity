@@ -94,7 +94,7 @@ h1 {
 }
 
 .container {
-  color: #D62828;
+  color: #45969b;
   width: 700px;
   max-width: calc(100% - 40px);
   margin: 0 auto;
@@ -185,7 +185,7 @@ h1 {
   border: 1px solid transparent;
   cursor: pointer;
   color: #fff;
-  background-color: #D62828;
+  background-color: #45969b;
   padding: 10px 20px;
   border-radius: 4px;
   outline: none;
