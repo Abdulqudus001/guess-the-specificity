@@ -154,7 +154,7 @@ button {
   border: 1px solid transparent;
   cursor: pointer;
   color: #fff;
-  background-color: #D62828;
+  background-color:#45969b;
   padding: 10px 20px;
   margin: 10px 0 20px;
   border-radius: 4px;
