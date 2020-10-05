@@ -11,4 +11,6 @@ export default [
   'main',
   'input',
   'button',
+  'article',
+  'section',
 ];
