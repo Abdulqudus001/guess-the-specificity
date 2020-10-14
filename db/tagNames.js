@@ -13,6 +13,7 @@ export default [
   'main',
   'article',
   'button',
+  'article',
   'section',
   'footer',
   'form',
