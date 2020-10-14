@@ -14,4 +14,7 @@ export default [
   '.hack',
   '.fest',
   'hacktober',
+  '.car',
+  '.animal',
+  '.page',
 ];

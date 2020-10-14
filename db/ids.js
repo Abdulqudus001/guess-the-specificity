@@ -12,4 +12,8 @@ export default [
   '#myId',
   '#Harsh',
   '#fold'
+  '#section-1',
+  '#mobile-nav',
+  '#card',
+  '#modal'
 ];
