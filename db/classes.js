@@ -11,4 +11,7 @@ export default [
   '.center-text',
   '.list-item',
   '.thing',
+  '.car',
+  '.animal',
+  '.page',
 ];
