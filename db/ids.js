@@ -10,4 +10,10 @@ export default [
   '#nav',
   '#id',
   '#myId',
+  '#Harsh',
+  '#fold'
+  '#section-1',
+  '#mobile-nav',
+  '#card',
+  '#modal'
 ];

@@ -11,4 +11,10 @@ export default [
   '.center-text',
   '.list-item',
   '.thing',
+  '.hack',
+  '.fest',
+  'hacktober',
+  '.car',
+  '.animal',
+  '.page',
 ];
