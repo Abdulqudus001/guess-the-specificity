@@ -16,10 +16,8 @@ export default [
   'section',
   'footer',
   'form',
-  'header',
   'i',
   'img',
-  'input',
   'label',
   'table',
   'thead',
@@ -34,4 +32,5 @@ export default [
   'select',
   'option',
   'textarea',
+  'input',
 ];

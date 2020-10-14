@@ -37,4 +37,5 @@ export default [
   ':read-only',
   ':read-write',
   ':required',
+  ':valid',
 ];
